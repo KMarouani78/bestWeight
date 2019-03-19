@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="bestWeight" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select your gender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LMu-OI-3hx">
+                                <rect key="frame" x="23" y="124" width="342" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p1c-Fp-vtg">
+                                <rect key="frame" x="23" y="172" width="342" height="216"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="0u3-uy-ieb"/>
+                                </constraints>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1jp-mn-XOg">
+                                <rect key="frame" x="254" y="446" width="111" height="30"/>
+                                <state key="normal" title="Get best Weight"/>
+                                <connections>
+                                    <action selector="buGetBestWeight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zop-5A-9T3"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="your best weight is " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0EQ-aq-RUl">
+                                <rect key="frame" x="23" y="529" width="342" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter your age " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RLy-Lh-60R">
+                                <rect key="frame" x="23" y="28" width="342" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="do6-Co-2ZT"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter your height" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qpd-nk-Xjg">
+                                <rect key="frame" x="23" y="79" width="342" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="IEh-p8-K9Z"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="LMu-OI-3hx" firstAttribute="top" secondItem="Qpd-nk-Xjg" secondAttribute="bottom" constant="15" id="2XP-UP-R01"/>
+                            <constraint firstItem="0EQ-aq-RUl" firstAttribute="top" secondItem="1jp-mn-XOg" secondAttribute="bottom" constant="53" id="33B-4E-Zmu"/>
+                            <constraint firstItem="LMu-OI-3hx" firstAttribute="leading" secondItem="Qpd-nk-Xjg" secondAttribute="leading" id="5Pw-VY-Zc6"/>
+                            <constraint firstItem="RLy-Lh-60R" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="23" id="AIp-pi-Y4O"/>
+                            <constraint firstItem="Qpd-nk-Xjg" firstAttribute="leading" secondItem="RLy-Lh-60R" secondAttribute="leading" id="Chd-dl-EVq"/>
+                            <constraint firstItem="RLy-Lh-60R" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="Erp-jZ-omh"/>
+                            <constraint firstItem="0EQ-aq-RUl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="23" id="Tpw-8H-5kF"/>
+                            <constraint firstItem="Qpd-nk-Xjg" firstAttribute="trailing" secondItem="RLy-Lh-60R" secondAttribute="trailing" id="UOd-R0-M7U"/>
+                            <constraint firstItem="LMu-OI-3hx" firstAttribute="trailing" secondItem="Qpd-nk-Xjg" secondAttribute="trailing" id="e5d-n2-rar"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RLy-Lh-60R" secondAttribute="trailing" constant="10" id="fIV-ef-9Xa"/>
+                            <constraint firstItem="1jp-mn-XOg" firstAttribute="top" secondItem="p1c-Fp-vtg" secondAttribute="bottom" constant="58" id="iHl-nB-Jrm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1jp-mn-XOg" secondAttribute="trailing" constant="10" id="imZ-gm-4ku"/>
+                            <constraint firstItem="p1c-Fp-vtg" firstAttribute="trailing" secondItem="LMu-OI-3hx" secondAttribute="trailing" id="jPv-bH-eBd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0EQ-aq-RUl" secondAttribute="trailing" constant="10" id="oic-rz-Jzd"/>
+                            <constraint firstItem="LMu-OI-3hx" firstAttribute="leading" secondItem="Qpd-nk-Xjg" secondAttribute="leading" id="p7M-mR-agd"/>
+                            <constraint firstItem="p1c-Fp-vtg" firstAttribute="top" secondItem="LMu-OI-3hx" secondAttribute="bottom" constant="27" id="rwJ-3S-XMc"/>
+                            <constraint firstItem="p1c-Fp-vtg" firstAttribute="leading" secondItem="LMu-OI-3hx" secondAttribute="leading" id="uqP-DZ-5A1"/>
+                            <constraint firstItem="Qpd-nk-Xjg" firstAttribute="top" secondItem="RLy-Lh-60R" secondAttribute="bottom" constant="21" id="usI-DY-Q3f"/>
+                            <constraint firstItem="Qpd-nk-Xjg" firstAttribute="top" secondItem="RLy-Lh-60R" secondAttribute="bottom" constant="21" id="yDU-oc-UDX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="PickerGender" destination="p1c-Fp-vtg" id="wfe-6f-CQK"/>
+                        <outlet property="laDisplayBestWeight" destination="0EQ-aq-RUl" id="TWH-yk-W1U"/>
+                        <outlet property="laSelectedGender" destination="LMu-OI-3hx" id="wqz-Z3-CIl"/>
+                        <outlet property="txtAge" destination="RLy-Lh-60R" id="ZA1-IQ-b9p"/>
+                        <outlet property="txtheight" destination="Qpd-nk-Xjg" id="aaO-W8-oih"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-126" y="-112"/>
+        </scene>
+    </scenes>
+</document>
